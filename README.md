@@ -4,7 +4,7 @@ This is my personal portfolio website built using **Next.js**, **TypeScript**, a
 
 ## 🌐 Live Demo
 
-🔗 [View Portfolio](https://portfolio-p68d.vercel.app)
+🔗 [View Portfolio](https://portfolio-psi-swart-44.vercel.app/)
 
 ## 📸 Features
 
