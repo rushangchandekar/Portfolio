@@ -71,10 +71,10 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
         </div>
         <div className="max-w-lg mx-auto">  
           <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide '>
-            Hello, I'm Rushang Chandekar 👋
+            Hello, I&apos;m Rushang Chandekar 👋
           </h1>
           <p className='mt-4 text-center text-white/60 md:text-lg'>
-            I'm a passionate MERN Stack Developer and aspiring Data Scientist, 
+            I&apos;m a passionate MERN Stack Developer and aspiring Data Scientist, 
             building dynamic apps and uncovering data insights.
           </p>
         </div>
@@ -89,9 +89,15 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl font-semibold cursor-pointer"
             style={{ textDecoration: "none" }}
           >
+<<<<<<< HEAD
             <span>📥</span>
             <span className="font-semibold">Download Resume</span>
           </a>
+=======
+            <span>👋</span>
+            <span className='font-semibold'>Let&apos;s Connect</span> 
+          </button> 
+>>>>>>> 8da2d7b6e496e660915db2d286bfa37e5011bbce
         </div>  
       </div>  
     </div>
