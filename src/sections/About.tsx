@@ -9,7 +9,7 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import mapImage from "@/assets/images/map.png";
+import mapImage from "@/assets/images/map.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
@@ -109,11 +109,15 @@ export const AboutSection = () => {
           <Card className="h-[320px] col-span-2 lg:col-span-1">
             <CardHeader 
               title="My Reads" 
-              description="Explore the books shaping my perspective." 
+              description="Hi! I’m Rushang Chandekar — a Computer Science student and aspiring developer with a passion for building real-world projects that make an impact.
+                           I love creating modern web applications and smart tools using technologies like React, Next.js, and Python. My projects often blend intuitive design with solid engineering — from clean UIs to data-driven ML models.
+                           I’m driven by curiosity and a love for solving challenging problems — whether it’s through coding, collaborating on hackathons, or pushing my skills through daily DSA practice.
+                           Outside of tech, I enjoy tackling coding puzzles on LeetCode and staying up to date with the latest AI trends.
+                           I’m always open to new opportunities, freelance gigs, or just a good tech conversation. Let’s build something amazing together!" 
             />
-            <div className="w-40 mx-auto mt-2 md:mt-0">
+            {/* <div className="w-40 mx-auto mt-2 md:mt-0">
               <Image src={bookImage} alt="Book Cover" />
-            </div>
+            </div> */}
           </Card>
           <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
             <CardHeader 

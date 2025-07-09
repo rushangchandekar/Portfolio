@@ -84,20 +84,13 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
             <ArrowDown className="size-4" />
           </button> 
           <a
-            href="/resume.pdf"
-            download
-            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl font-semibold cursor-pointer"
-            style={{ textDecoration: "none" }}
+            href="/Rushang_Chandekar_Resume.pdf"
+            download="Rushang-Chandekar-Resume.pdf"
+            className="relative z-50 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl font-semibold cursor-pointer no-underline"
           >
-<<<<<<< HEAD
             <span>📥</span>
             <span className="font-semibold">Download Resume</span>
           </a>
-=======
-            <span>👋</span>
-            <span className='font-semibold'>Let&apos;s Connect</span> 
-          </button> 
->>>>>>> 8da2d7b6e496e660915db2d286bfa37e5011bbce
         </div>  
       </div>  
     </div>

@@ -2,6 +2,7 @@ import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import SpamLite from "@/assets/images/spamlite.png";
 import RareDx from "@/assets/images/raredx.png";
 import Image from "next/image";
+import Link from "next/link";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg';
 import { SectionHeader } from "@/components/SectionHeader";
@@ -101,6 +102,16 @@ export const ProjectsSection = () => {
                 </div>
             </Card>
           ))}
+        </div>
+        <div className="flex justify-center mt-12">
+          <Link href="/all-projects">
+            <button 
+              className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 px-8 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform"
+            >
+              <span>View More Projects</span>
+              <ArrowUpIcon className="size-4" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
