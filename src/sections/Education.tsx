@@ -8,7 +8,7 @@ const educationData = [
     degree: "Bachelor of Technology in Computer Science",
     institution: "JD College of Engineering",
     year: "2023 - 2027",
-    description: "Graduated with First Class Honors. Specialized in web development and Data  Science.",
+    description: "Graduated with First Class Honors. Specialized in web development and Data Science.",
   },
   {
     degree: "Higher Secondary School",
@@ -25,6 +25,12 @@ const itemVariants = {
 };
 
 export const EducationSection = () => {
+  // ✅ Create refs and inViews at the top
+  const inViewData = educationData.map(() => useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  }));
+
   return (
     <section id="education" className="pb-16 lg:py-24">
       <div className="container">
@@ -37,10 +43,8 @@ export const EducationSection = () => {
           <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-200 -translate-x-1/2 z-0" />
           <ul className="relative z-10">
             {educationData.map((edu, i) => {
-              const [ref, inView] = useInView({
-                threshold: 0.5,
-                triggerOnce: false,
-              });
+              const [ref, inView] = inViewData[i]; // Use pre-created ref & inView
+
               return (
                 <motion.li
                   ref={ref}
