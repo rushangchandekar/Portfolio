@@ -25,25 +25,25 @@ const itemVariants = {
 };
 
 export const EducationSection = () => {
-  // ✅ PRE-CREATE refs & inView for each item — at top level.
-  const inViews = educationData.map(() => useInView({
-    threshold: 0.5,
-    triggerOnce: false,
-  }));
+  // ✅ Declare one hook call for each item — top-level, NOT in a loop!
+  const inView0 = useInView({ threshold: 0.5, triggerOnce: false });
+  const inView1 = useInView({ threshold: 0.5, triggerOnce: false });
+
+  const inViews = [inView0, inView1];
 
   return (
     <section id="education" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader 
-          eyebrow="My Academic Journey"  
-          title="Education"  
+          eyebrow="My Academic Journey"
+          title="Education"
           description="Foundations that shaped my skills — from core concepts to practical applications."
         />
         <div className="relative max-w-3xl mx-auto mt-12">
           <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-200 -translate-x-1/2 z-0" />
           <ul className="relative z-10">
             {educationData.map((edu, i) => {
-              const [ref, inView] = inViews[i]; // ✅ Use pre-created hook
+              const [ref, inView] = inViews[i];
 
               return (
                 <motion.li
