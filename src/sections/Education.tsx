@@ -25,8 +25,8 @@ const itemVariants = {
 };
 
 export const EducationSection = () => {
-  // ✅ Create refs and inViews at the top
-  const inViewData = educationData.map(() => useInView({
+  // ✅ PRE-CREATE refs & inView for each item — at top level.
+  const inViews = educationData.map(() => useInView({
     threshold: 0.5,
     triggerOnce: false,
   }));
@@ -43,7 +43,7 @@ export const EducationSection = () => {
           <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-200 -translate-x-1/2 z-0" />
           <ul className="relative z-10">
             {educationData.map((edu, i) => {
-              const [ref, inView] = inViewData[i]; // Use pre-created ref & inView
+              const [ref, inView] = inViews[i]; // ✅ Use pre-created hook
 
               return (
                 <motion.li
