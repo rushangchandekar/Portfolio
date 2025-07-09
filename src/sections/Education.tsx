@@ -49,14 +49,14 @@ export const EducationSection = () => {
                 <motion.li
                   ref={ref}
                   key={i}
-                  className="flex mb-16 items-center w-full"
+                  className="flex flex-col md:flex-row mb-16 items-center w-full"
                   variants={itemVariants}
                   initial="hidden"
                   animate={inView ? "visible" : "exit"}
                 >
                   {i % 2 === 0 ? (
                     <>
-                      <div className="w-1/2 flex justify-end pr-8">
+                      <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-8 mb-6 md:mb-0">
                         <Card className="w-full max-w-sm p-6">
                           <h3 className="font-bold text-xl text-white mb-2">{edu.degree}</h3>
                           <p className="text-gray-400 text-sm mb-1">{edu.institution}</p>
@@ -67,15 +67,15 @@ export const EducationSection = () => {
                       <div className="w-0 flex flex-col items-center">
                         <span className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow" />
                       </div>
-                      <div className="w-1/2" />
+                      <div className="hidden md:block w-1/2" />
                     </>
                   ) : (
                     <>
-                      <div className="w-1/2" />
+                      <div className="hidden md:block w-1/2" />
                       <div className="w-0 flex flex-col items-center">
                         <span className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow" />
                       </div>
-                      <div className="w-1/2 flex justify-start pl-8">
+                      <div className="w-full md:w-1/2 flex justify-center md:justify-start md:pl-8 mt-6 md:mt-0">
                         <Card className="w-full max-w-sm p-6">
                           <h3 className="font-bold text-xl text-white mb-2">{edu.degree}</h3>
                           <p className="text-gray-400 text-sm mb-1">{edu.institution}</p>
