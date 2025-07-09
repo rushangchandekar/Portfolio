@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 import memojiImage from '@/assets/images/memoji-computer.png';
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
