@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -23,21 +25,36 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
     e.preventDefault();
     setSending(true);
     setSent(false);
+    setError(null);
 
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_hihsasp', // Replace with your Service ID from EmailJS
+        'template_pqgjnpl', // Replace with your Template ID from EmailJS
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone: form.phone || "Not provided",
+          message: form.message,
+        },
+        'jkv5jdUmUUO9DhMWO' // Replace with your Public Key from EmailJS
+      );
 
-    setSending(false);
-    setSent(true);
-    setForm({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
+      console.log('Email sent successfully:', result.text);
+      setSent(true);
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (err: any) {
+      console.error('Email failed to send:', err);
+      setError(`Failed to send message: ${err.text || "Unknown error"}`);
+    } finally {
+      setSending(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -47,6 +64,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       <div className="bg-[#181e29] rounded-lg p-8 w-full max-w-2xl relative border border-gray-700">
         <button className="absolute top-3 right-4 text-gray-400 text-2xl" onClick={onClose}>×</button>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {/* Your existing form fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-white mb-1">Your Name</label>
@@ -96,10 +114,12 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               className="w-full px-3 py-2 rounded bg-[#232b3b] text-white border border-gray-600 focus:outline-none focus:border-emerald-400"
             />
           </div>
+          {error && <div className="text-red-400 text-center mt-2">{error}</div>}
+          {sent && <div className="text-green-400 text-center mt-2">Message sent successfully! I'll get back to you soon.</div>}
           <div className="flex justify-end">
             <button
               type="submit"
-              className="flex items-center gap-2 px-6 py-2 border border-pink-400 text-pink-400 rounded hover:bg-pink-400 hover:text-white transition font-semibold"
+              className="flex items-center gap-2 px-6 py-2 border border-pink-400 text-pink-400 rounded hover:bg-pink-400 hover:text-white transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={sending}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -108,7 +128,6 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               {sending ? "Sending..." : "Send Message"}
             </button>
           </div>
-          {sent && <div className="text-green-400 text-center mt-2">Message sent!</div>}
         </form>
       </div>
     </div>
