@@ -115,7 +115,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             />
           </div>
           {error && <div className="text-red-400 text-center mt-2">{error}</div>}
-          {sent && <div className="text-green-400 text-center mt-2">Message sent successfully! I'll get back to you soon.</div>}
+          {sent && <div className="text-green-400 text-center mt-2">Message sent successfully! I&apos;ll get back to you soon.</div>}
           <div className="flex justify-end">
             <button
               type="submit"
