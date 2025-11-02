@@ -1,4 +1,4 @@
-import FeastFinder from "@/assets/images/feastfinder.png";
+import FeastFinder from "@/assets/images/FeastFinder.png";
 import SpamLite from "@/assets/images/spamlite.png";
 import RareDx from "@/assets/images/raredx.png";
 import Image from "next/image";
