@@ -1,4 +1,4 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import FeastFinder from "@/assets/images/feastfinder.png";
 import SpamLite from "@/assets/images/spamlite.png";
 import RareDx from "@/assets/images/raredx.png";
 import Image from "next/image";
@@ -10,16 +10,16 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Recipix",
-    year: "2022",
+    company: "FestFinder",
+    year: "2024",
     title: "Recipe Finder App",
     results: [
       { title: "Built with HTML, CSS & JavaScript using MealDB API" },
       { title: "Enabled ingredient-based search for over 200+ recipes" },
       { title: "Enhanced user engagement through simple and intuitive UI" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://feast-finder-pnwx.vercel.app/",
+    image: FeastFinder,
   },
   {
     company: "Spamlite",
