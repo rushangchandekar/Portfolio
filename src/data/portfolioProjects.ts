@@ -1,5 +1,5 @@
-import FeastFinder from "@/assets/images/feastfinder.png";
-import InternHub from "@/assets/images/internhub.png";
+import FeastFinder from "@/assets/images/FeastFinder.png";
+import InternHub from "@/assets/images/InternHub.png";
 import SpamLite from "@/assets/images/spamlite.png";
 import RareDx from "@/assets/images/raredx.png";
 
