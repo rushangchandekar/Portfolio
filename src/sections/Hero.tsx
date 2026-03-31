@@ -75,7 +75,7 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
             Hello, I&apos;m Rushang Chandekar 👋
           </h1>
           <p className='mt-4 text-center text-white/60 md:text-lg'>
-            I&apos;m a passionate MERN Stack Developer and aspiring Data Scientist, 
+            I&apos;m a passionate MERN Stack Developer and aspiring Data Analyst, 
             building dynamic apps and uncovering data insights.
           </p>
         </div>

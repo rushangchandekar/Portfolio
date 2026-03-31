@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <!-- Pandas logo: vertical bars with gaps + colored squares -->
+  <!-- Left tall bar -->
+  <rect x="80" y="96" width="56" height="352" rx="4"/>
+  <!-- Center-left top bar -->
+  <rect x="180" y="48" width="56" height="120" rx="4"/>
+  <!-- Center-left square -->
+  <rect x="180" y="192" width="56" height="56" rx="4"/>
+  <!-- Center-left bottom bar -->
+  <rect x="180" y="272" width="56" height="120" rx="4"/>
+  <!-- Center-right top bar -->
+  <rect x="280" y="96" width="56" height="80" rx="4"/>
+  <!-- Center-right square -->
+  <rect x="280" y="240" width="56" height="56" rx="4"/>
+  <!-- Center-right bottom bar -->
+  <rect x="280" y="320" width="56" height="120" rx="4"/>
+  <!-- Right tall bar -->
+  <rect x="376" y="64" width="56" height="352" rx="4"/>
+</svg>

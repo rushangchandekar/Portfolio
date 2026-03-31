@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <!-- Matplotlib logo: radar/polar chart with concentric circles and radial lines -->
+  <!-- Outer circle -->
+  <path d="M256,32 A224,224 0 1,1 255.9,32" fill="none" stroke="currentColor" stroke-width="24"/>
+  <!-- Middle circle -->
+  <path d="M256,96 A160,160 0 1,1 255.9,96" fill="none" stroke="currentColor" stroke-width="20"/>
+  <!-- Inner circle -->
+  <path d="M256,176 A80,80 0 1,1 255.9,176" fill="none" stroke="currentColor" stroke-width="16"/>
+  <!-- Center dot -->
+  <circle cx="256" cy="256" r="16"/>
+  <!-- Radial lines (8 directions) -->
+  <line x1="256" y1="32" x2="256" y2="480" stroke="currentColor" stroke-width="12"/>
+  <line x1="32" y1="256" x2="480" y2="256" stroke="currentColor" stroke-width="12"/>
+  <line x1="98" y1="98" x2="414" y2="414" stroke="currentColor" stroke-width="12"/>
+  <line x1="414" y1="98" x2="98" y2="414" stroke="currentColor" stroke-width="12"/>
+  <!-- Wedge shapes representing data (simplified) -->
+  <path d="M256,256 L192,112 A160,160 0 0,1 320,112 Z" opacity="0.6"/>
+  <path d="M256,256 L96,300 A160,160 0 0,1 140,168 Z" opacity="0.5"/>
+  <path d="M256,256 L256,416 A80,80 0 0,1 220,340 Z" opacity="0.7"/>
+</svg>

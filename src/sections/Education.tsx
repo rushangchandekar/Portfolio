@@ -1,11 +1,12 @@
-import { motion } from "framer-motion";
-import { SectionHeader } from "@/components/SectionHeader";
-import { Card } from "@/components/Card";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { SectionHeader } from "@/components/SectionHeader";
+import "./Education.css";
 
 const educationData = [
   {
-    degree: "Bachelor of Technology in Computer Science",
+    degree: "B.Tech in Computer Science",
     institution: "JD College of Engineering",
     year: "2023 - 2027",
     description: "Graduated with First Class Honors. Specialized in web development and Data Science.",
@@ -25,72 +26,62 @@ const itemVariants = {
 };
 
 export const EducationSection = () => {
-  // ✅ Declare one hook call for each item — top-level, NOT in a loop!
-  const inView0 = useInView({ threshold: 0.5, triggerOnce: false });
-  const inView1 = useInView({ threshold: 0.5, triggerOnce: false });
+  const inView0 = useInView({ threshold: 0.2, triggerOnce: false });
+  const inView1 = useInView({ threshold: 0.2, triggerOnce: false });
 
   const inViews = [inView0, inView1];
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 70%", "end 50%"]
+  });
+
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
-    <section id="education" className="pb-16 lg:py-24">
+    <div id="education" className="py-20 lg:py-28">
       <div className="container">
-        <SectionHeader 
+
+        <SectionHeader
           eyebrow="My Academic Journey"
           title="Education"
           description="Foundations that shaped my skills — from core concepts to practical applications."
         />
-        <div className="relative max-w-3xl mx-auto mt-12">
-          <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-200 -translate-x-1/2 z-0" />
-          <ul className="relative z-10">
-            {educationData.map((edu, i) => {
-              const [ref, inView] = inViews[i];
 
-              return (
-                <motion.li
-                  ref={ref}
-                  key={i}
-                  className="flex flex-col md:flex-row mb-16 items-center w-full"
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate={inView ? "visible" : "exit"}
-                >
-                  {i % 2 === 0 ? (
-                    <>
-                      <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-8 mb-6 md:mb-0">
-                        <Card className="w-full max-w-sm p-6">
-                          <h3 className="font-bold text-xl text-white mb-2">{edu.degree}</h3>
-                          <p className="text-gray-400 text-sm mb-1">{edu.institution}</p>
-                          <p className="text-gray-500 text-xs mb-2">{edu.year}</p>
-                          <p className="text-gray-300 text-base">{edu.description}</p>
-                        </Card>
-                      </div>
-                      <div className="w-0 flex flex-col items-center">
-                        <span className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow" />
-                      </div>
-                      <div className="hidden md:block w-1/2" />
-                    </>
-                  ) : (
-                    <>
-                      <div className="hidden md:block w-1/2" />
-                      <div className="w-0 flex flex-col items-center">
-                        <span className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow" />
-                      </div>
-                      <div className="w-full md:w-1/2 flex justify-center md:justify-start md:pl-8 mt-6 md:mt-0">
-                        <Card className="w-full max-w-sm p-6">
-                          <h3 className="font-bold text-xl text-white mb-2">{edu.degree}</h3>
-                          <p className="text-gray-400 text-sm mb-1">{edu.institution}</p>
-                          <p className="text-gray-500 text-xs mb-2">{edu.year}</p>
-                          <p className="text-gray-300 text-base">{edu.description}</p>
-                        </Card>
-                      </div>
-                    </>
-                  )}
-                </motion.li>
-              );
-            })}
-          </ul>
+        <div className="career-info mt-20 md:mt-24" ref={containerRef}>
+          <motion.div
+            className="career-timeline"
+            style={{ height: lineHeight }}
+          >
+            <div className="career-dot"></div>
+          </motion.div>
+          {educationData.map((edu, i) => {
+            const [ref, inView] = inViews[i];
+
+            return (
+              <motion.div
+                ref={ref}
+                key={i}
+                className="career-info-box"
+                variants={itemVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "exit"}
+              >
+                <div className="career-info-in w-full items-start">
+                  <div className="career-role shrink-1">
+                    <h4 className="font-serif text-2xl md:text-3xl text-white tracking-tight leading-tight">{edu.degree}</h4>
+                    <h5 className="font-semibold uppercase tracking-wider text-emerald-400 mt-2">{edu.institution}</h5>
+                  </div>
+                  <h3 className="font-serif text-3xl md:text-4xl text-right shrink-0">{edu.year}</h3>
+                </div>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed mt-4 md:mt-0">{edu.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
+

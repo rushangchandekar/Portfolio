@@ -3,45 +3,35 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CSSIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/map.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import StarIcon from "@/assets/icons/star.svg";
+import PythonIcon from "@/assets/icons/python.svg";
+import DatabaseIcon from "@/assets/icons/database.svg";
+import TableauIcon from "@/assets/icons/tableau.svg";
+import PandasIcon from "@/assets/icons/pandas.svg";
+import NumPyIcon from "@/assets/icons/numpy.svg";
+import PowerBIIcon from "@/assets/icons/powerbi.svg";
+import FileExcelIcon from "@/assets/icons/excel.svg";
+import MatplotlibIcon from "@/assets/icons/matplotlib.svg";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-const toolboxItems = [
-  {
-    title: 'Javascript',
-    iconType: JavascriptIcon,
-  },
-  {
-    title: 'HTML5',
-    iconType: HTMLIcon,
-  },
-  {
-    title: 'CSS3',
-    iconType: CSSIcon,  
-  },
-  {
-    title: 'React',
-    iconType: ReactIcon,
-  },
-  {
-    title: 'Chrome',
-    iconType: ChromeIcon,
-  },
-  {
-    title: 'Github',
-    iconType: GithubIcon,
-  },
-]
+const randomBetween = (min: number, max: number) =>
+  Math.random() * (max - min) + min;
+
+const focusItems = [
+  { title: 'Python', iconType: PythonIcon },
+  { title: 'SQL', iconType: DatabaseIcon },
+  { title: 'Tableau', iconType: TableauIcon },
+  { title: 'Pandas', iconType: PandasIcon },
+  { title: 'NumPy', iconType: NumPyIcon },
+  { title: 'Power BI', iconType: PowerBIIcon },
+  { title: 'Excel', iconType: FileExcelIcon },
+  { title: 'Matplotlib', iconType: MatplotlibIcon },
+];
 
 const hoobies = [
   {
@@ -96,6 +86,7 @@ const hoobies = [
 
 export const AboutSection = () => {
   const constraintRef = useRef(null);
+  const [hintVisible, setHintVisible] = useState(true);
   return (
   <div id="about" className="py-20 lg:py-28">
     <div className="container">
@@ -108,25 +99,33 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
           <Card className="h-[320px] col-span-2 lg:col-span-1">
             <CardHeader 
-              title="My Reads" 
-              description="Hi! I’m Rushang Chandekar — a Computer Science student and aspiring developer with a passion for building real-world projects that make an impact.
-                           I love creating modern web applications and smart tools using technologies like React, Next.js, and Python. My projects often blend intuitive design with solid engineering — from clean UIs to data-driven ML models.
-                           I’m driven by curiosity and a love for solving challenging problems — whether it’s through coding, collaborating on hackathons, or pushing my skills through daily DSA practice.
-                           Outside of tech, I enjoy tackling coding puzzles on LeetCode and staying up to date with the latest AI trends.
-                           I’m always open to new opportunities, freelance gigs, or just a good tech conversation. Let’s build something amazing together!" 
+              title="My Journey" 
+              description="Hi, I'm Rushang! I'm a CS student passionate about building data-driven tools and modern web apps. I thrive on solving complex problems, whether it's optimizing code, tackling LeetCode, or exploring the latest in AI and Data Analytics. Always curious, always learning." 
             />
             {/* <div className="w-40 mx-auto mt-2 md:mt-0">
               <Image src={bookImage} alt="Book Cover" />
             </div> */}
           </Card>
           <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-            <CardHeader 
-              title="My Toolbox" 
-              description="Explore the technologies and tools I use to craft exceptional digital experiences." 
-              className=""
-            />
-            <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
-            <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]"/>
+            <div className="flex flex-col p-6 md:py-8 md:px-10">
+              <div className="inline-flex items-center gap-2">
+                <StarIcon className="size-9 text-emerald-300"/>
+                <h3 className="font-serif text-3xl">My Focus</h3>
+                <div className="inline-flex items-center gap-1.5 ml-3 bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1">
+                  <motion.div
+                    className="size-2 rounded-full bg-emerald-400"
+                    animate={{ opacity: [1, 0.3, 1], scale: [1, 0.85, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Now</span>
+                </div>
+              </div>
+              <p className="text-sm lg:text-base max-wd-xs text-white/60 mt-2">Currently deep-diving into Data Analytics — turning raw data into actionable insights.</p>
+            </div>
+            {/* Row 1 — scrolls left */}
+            <ToolboxItems items={focusItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
+            {/* Row 2 — scrolls right */}
+            <ToolboxItems items={focusItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:15s]"/>
           </Card>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
@@ -136,24 +135,62 @@ export const AboutSection = () => {
               description="Explore my interests and hobbies beyond the digital realm."
               className="px-6 py-6" 
             />
-            <div className="relative flex-1" ref={constraintRef}>
-              {hoobies.map((hobby) => (
-                <motion.div 
-                  key={hobby.title} 
-                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-                  style={{
-                    left: hobby.left,
-                    top: hobby.top,
-                  }}
-                  drag
-                  dragConstraints={constraintRef}
+            <div className="relative flex-1 overflow-hidden" ref={constraintRef}>
+              {/* Drag hint */}
+              <motion.div
+                className="absolute inset-0 flex flex-col items-center justify-end pb-3 pointer-events-none z-10 gap-1"
+                animate={{ opacity: hintVisible ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <motion.span
+                  className="text-2xl select-none"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <span className="font-medium text-gray-950">
-                    {hobby.title}
-                  </span>
-                  <span>{hobby.emoji}</span>
-                </motion.div>
-              ))}
+                  👆
+                </motion.span>
+                <span className="text-xs font-medium text-gray-500 bg-white/60 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
+                  Drag the bubbles!
+                </span>
+              </motion.div>
+              {hoobies.map((hobby) => {
+                const duration = randomBetween(1.8, 3.2);
+                const rotAmt = randomBetween(4, 9);
+                const xDrift = randomBetween(3, 7);
+                const yDrift = randomBetween(3, 7);
+                const delay = randomBetween(0, 1.5);
+                return (
+                  <motion.div 
+                    key={hobby.title} 
+                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-grab active:cursor-grabbing"
+                    onDragStart={() => setHintVisible(false)}
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top,
+                    }}
+                    animate={{
+                      rotate: [0, rotAmt, -rotAmt, rotAmt * 0.5, -rotAmt * 0.5, 0],
+                      x: [0, xDrift, -xDrift * 0.6, xDrift * 0.4, 0],
+                      y: [0, -yDrift * 0.5, yDrift, -yDrift * 0.3, 0],
+                    }}
+                    transition={{
+                      duration,
+                      delay,
+                      repeat: Infinity,
+                      repeatType: "mirror",
+                      ease: "easeInOut",
+                    }}
+                    drag
+                    dragConstraints={constraintRef}
+                    whileDrag={{ scale: 1.1, rotate: 0 }}
+                  >
+                    <span className="font-medium text-gray-950">
+                      {hobby.title}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </motion.div>
+                );
+              })}
             </div>
           </Card>
           <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">

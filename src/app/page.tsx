@@ -9,6 +9,7 @@ import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
 import { TestimonialsSection } from "@/sections/Testimonials";
 import { AboutSection } from "@/sections/About";
+import { TechStackSection } from "@/sections/TechStack";
 import { Footer } from "@/sections/Footer";
 
 export default function Home() {
@@ -18,11 +19,12 @@ export default function Home() {
     <>
       <Header onContactClick={() => setShowContact(true)} />
       <HeroSection onContactClick={() => setShowContact(true)} />
+      <AboutSection />
+      <TechStackSection />
       <EducationSection />
       <ProjectsSection />
       <TapeSection />
       <TestimonialsSection />
-      <AboutSection />
       <ContactSection onContactClick={() => setShowContact(true)} />
       <Footer />
       <ContactModal isOpen={showContact} onClose={() => setShowContact(false)} />

@@ -22,7 +22,7 @@ export default function AllProjectsPage() {
   return (
     <>
       <Head>
-        <title>All Projects | My Portfolio</title>
+        <title>Rushang Chandekar | Projects</title>
       </Head>
 
       <Header onContactClick={() => setShowContact(true)} isSubPage={true} />

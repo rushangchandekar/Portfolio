@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <!-- Tableau logo: grid of crosses in different sizes -->
+  <!-- Center large cross -->
+  <rect x="232" y="160" width="48" height="192" rx="4"/>
+  <rect x="160" y="232" width="192" height="48" rx="4"/>
+  <!-- Top cross -->
+  <rect x="244" y="32" width="24" height="96" rx="3"/>
+  <rect x="208" y="56" width="96" height="24" rx="3"/>
+  <!-- Bottom cross -->
+  <rect x="244" y="384" width="24" height="96" rx="3"/>
+  <rect x="208" y="432" width="96" height="24" rx="3"/>
+  <!-- Left cross -->
+  <rect x="56" y="232" width="24" height="96" rx="3"/>
+  <rect x="32" y="268" width="96" height="24" rx="3"/>
+  <!-- Right cross -->
+  <rect x="432" y="208" width="24" height="96" rx="3"/>
+  <rect x="384" y="244" width="96" height="24" rx="3"/>
+  <!-- Top-left cross -->
+  <rect x="140" y="96" width="20" height="80" rx="3"/>
+  <rect x="108" y="124" width="80" height="20" rx="3"/>
+  <!-- Top-right cross -->
+  <rect x="352" y="96" width="20" height="80" rx="3"/>
+  <rect x="320" y="124" width="80" height="20" rx="3"/>
+  <!-- Bottom-left cross -->
+  <rect x="140" y="336" width="20" height="80" rx="3"/>
+  <rect x="108" y="368" width="80" height="20" rx="3"/>
+  <!-- Bottom-right cross -->
+  <rect x="352" y="336" width="20" height="80" rx="3"/>
+  <rect x="320" y="368" width="80" height="20" rx="3"/>
+</svg>
