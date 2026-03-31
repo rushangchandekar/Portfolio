@@ -68,14 +68,14 @@ export const EducationSection = () => {
                 initial="hidden"
                 animate={inView ? "visible" : "exit"}
               >
-                <div className="career-info-in w-full items-start">
-                  <div className="career-role shrink-1">
-                    <h4 className="font-serif text-2xl md:text-3xl text-white tracking-tight leading-tight">{edu.degree}</h4>
+                <div className="career-info-in items-start">
+                  <div className="career-role shrink-1 max-w-[65%]">
+                    <h4 className="font-serif text-2xl md:text-xl text-white tracking-tight leading-snug">{edu.degree}</h4>
                     <h5 className="font-semibold uppercase tracking-wider text-emerald-400 mt-2">{edu.institution}</h5>
                   </div>
-                  <h3 className="font-serif text-3xl md:text-4xl text-right shrink-0">{edu.year}</h3>
+                  <h3 className="font-serif lg:text-2xl sm:text-xl text-white/60 text-right shrink-0">{edu.year}</h3>
                 </div>
-                <p className="text-white/60 text-sm md:text-base leading-relaxed mt-4 md:mt-0">{edu.description}</p>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed">{edu.description}</p>
               </motion.div>
             );
           })}

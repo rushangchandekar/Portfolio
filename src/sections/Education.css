@@ -165,15 +165,6 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .career-info {
-    margin: 0;
-  }
-  .career-section h2 {
-    width: 100%;
-    font-size: 45px;
-    line-height: 45px;
-    margin-top: 0px;
-  }
   .career-info-in {
     gap: 0px;
   }
@@ -183,12 +174,5 @@
   .career-info-in,
   .career-info-box p {
     padding-left: 5%;
-  }
-  .career-section {
-    padding-top: 90px;
-    margin-top: -70px;
-    align-items: start;
-    place-items: inherit;
-    justify-content: left;
   }
 }
