@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Calistoga} from 'next/font/google';
+import { Inter, Calistoga, Geist } from 'next/font/google';
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets: ["latin"], variable: "--font-sans" })
+const geist = Geist({subsets:['latin'],variable:'--font-sans'})
 const calistoga = Calistoga({
   subsets: ["latin"], 
   variable: "--font-serif" , 
@@ -19,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={twMerge(
-        inter.variable, 
+        geist.variable, 
         calistoga.variable, 
         "bg-gray-900 text-white antialiased font-sans"
         )}

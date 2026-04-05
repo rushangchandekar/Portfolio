@@ -3,7 +3,7 @@ import OrbitingSkills from "@/components/ui/orbiting-skills";
 
 export const TechStackSection = () => {
   return (
-    <section id="techstack" className="py-12 lg:py-20">
+    <section id="tech-stack" className="py-12 lg:py-20">
       <div className="container relative z-10">
         <SectionHeader
           eyebrow="My Foundation"

@@ -66,7 +66,7 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
               <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
             </div>
             <div className="text-sm font-medium">
-              Available for new projects
+              Available for opportunities
             </div>
           </div>  
         </div>
@@ -80,10 +80,10 @@ export const HeroSection = ({ onContactClick }: { onContactClick: () => void }) 
           </p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-          <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+          <a href="#projects" className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white cursor-pointer no-underline z-50 relative'>
             <span className='font-semibold'>Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button> 
+          </a>
           <a
             href="/Rushang_Chandekar_Resume.pdf"
             download="Rushang-Chandekar-Resume.pdf"
