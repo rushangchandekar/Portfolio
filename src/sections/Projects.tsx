@@ -1,6 +1,6 @@
 import FeastFinder from "@/assets/images/FeastFinder.png";
 import PhonePe from "@/assets/images/PhonePe.png";
-import RareDx from "@/assets/images/raredx.png";
+import RareDx from "@/assets/images/RareDx.png";
 import Image from "next/image";
 import Link from "next/link";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
