@@ -28,21 +28,35 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
     setError(null);
 
     try {
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        'service_hihsasp', // Replace with your Service ID from EmailJS
-        'template_pqgjnpl', // Replace with your Template ID from EmailJS
-        {
-          name: form.name,
-          email: form.email,
-          phone: form.phone || "Not provided",
-          message: form.message,
-          title: "Portfolio Contact Form",
-        },
-        'jkv5jdUmUUO9DhMWO' // Replace with your Public Key from EmailJS
-      );
+      // Send both emails concurrently:
+      // 1. Notification to owner (using a template configured to send to your email)
+      // 2. Acknowledgement to visitor (using template_pqgjnpl, configured to send to {{from_email}})
+      const [ownerResult, visitorResult] = await Promise.all([
+        emailjs.send(
+          'service_hihsasp',
+          'template_admin', // Template ID for Owner Notification
+          {
+            from_name: form.name,
+            from_email: form.email,
+            phone: form.phone || "Not provided",
+            message: form.message,
+          },
+          'jkv5jdUmUUO9DhMWO'
+        ),
+        emailjs.send(
+          'service_hihsasp',
+          'template_pqgjnpl', // Template ID for Visitor Acknowledgement
+          {
+            from_name: form.name,
+            from_email: form.email,
+            phone: form.phone || "Not provided",
+            message: form.message,
+          },
+          'jkv5jdUmUUO9DhMWO'
+        )
+      ]);
 
-      console.log('Email sent successfully:', result.text);
+      console.log('Emails sent successfully:', ownerResult.text, visitorResult.text);
       setSent(true);
       setForm({
         name: "",
