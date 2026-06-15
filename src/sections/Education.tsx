@@ -9,7 +9,7 @@ const educationData = [
     degree: "B.Tech in Computer Science",
     institution: "JD College of Engineering",
     year: "2023 - 2027",
-    description: "Graduated with First Class Honors. Specialized in web development and Data Science.",
+    description: "Currently pursuing. Specializing in Full Stack Development and Data Analytics.",
   },
   {
     degree: "Higher Secondary School",

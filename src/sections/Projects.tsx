@@ -1,5 +1,5 @@
 import FeastFinder from "@/assets/images/FeastFinder.png";
-import SpamLite from "@/assets/images/spamlite.png";
+import PhonePe from "@/assets/images/PhonePe.png";
 import RareDx from "@/assets/images/raredx.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,16 +23,16 @@ const portfolioProjects = [
     image: FeastFinder,
   },
   {
-    company: "Spamlite",
-    year: "2021",
-    title: "SMS Spam Detection",
+    company: "PhonePe",
+    year: "2024",
+    title: "UPI Payment Interface Clone",
     results: [
-      { title: "Trained ML model using Scikit-learn with 95% accuracy" },
-      { title: "Used Streamlit to deploy an interactive web app" },
-      { title: "Processed 5,000+ SMS samples for real-time classification" },
+      { title: "Built a secure payment interface simulating PhonePe UPI transactions and wallet flows" },
+      { title: "Implemented real-time transaction history tracking and payment status dashboard" },
+      { title: "Integrated robust verification checks for money transfers and UPI payments" },
     ],
-    link: "https://sms-spam-detection-ksroffnutzevqpuhrywbah.streamlit.app/",
-    image: SpamLite,
+    link: "https://app.fabric.microsoft.com/links/OHdSwlZmMZ?ctid=4517da72-c8f7-4cec-b2fc-fda9fe4354f9&pbi_source=linkShare",
+    image: PhonePe,
   },
   {
     company: "RareDx",
@@ -92,7 +92,10 @@ export const ProjectsSection = () => {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl border border-gray-500"
+                      priority
+                      quality={100}
+                      draggable={false}
+                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl ring-1 ring-white/10 will-change-transform [backface-visibility:hidden] [transform:translateZ(0)]"
                     />
                   </div>
                 </div>
@@ -100,10 +103,10 @@ export const ProjectsSection = () => {
             </ScrollStackItem>
           ))}
         </ScrollStack>
-        <div className="flex justify-center mt-24 relative z-30">
+        <div className="flex justify-center mt-12 relative z-30">
           <Link href="/all-projects">
             <button
-              className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 px-8 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform"
+              className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 h-12 px-8 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg transition-transform duration-300 will-change-transform hover:scale-[1.03]"
             >
               <span>View More Projects</span>
               <ArrowUpIcon className="size-4" />
