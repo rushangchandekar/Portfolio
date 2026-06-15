@@ -33,10 +33,11 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         'service_hihsasp', // Replace with your Service ID from EmailJS
         'template_pqgjnpl', // Replace with your Template ID from EmailJS
         {
-          from_name: form.name,
-          from_email: form.email,
+          name: form.name,
+          email: form.email,
           phone: form.phone || "Not provided",
           message: form.message,
+          title: "Portfolio Contact Form",
         },
         'jkv5jdUmUUO9DhMWO' // Replace with your Public Key from EmailJS
       );
