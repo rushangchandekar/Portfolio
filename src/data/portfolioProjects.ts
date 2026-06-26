@@ -10,6 +10,7 @@ import TruthLens from "@/assets/images/TruthLens.png";
 import StudyStack from "@/assets/images/StudyStack.png";
 import PhonePe from "@/assets/images/PhonePe.png";
 import CustomerBehavior from "@/assets/images/Customer_Behavior.png";
+import AIPhen from "@/assets/images/AIPhen.png";
 
 const portfolioProjects = [
   {
@@ -35,7 +36,7 @@ const portfolioProjects = [
       { title: "Integrated interactive stats dashboard with visual distribution and activity charts" },
       { title: "Implemented local database fallback for seamless offline capability" },
     ],
-    link: "https://studystack-student.vercel.app/",
+    link: "https://study-stack-vert.vercel.app/",
     image: StudyStack,
   },
   {
@@ -90,19 +91,7 @@ const portfolioProjects = [
     link: "https://app.fabric.microsoft.com/links/OHdSwlZmMZ?ctid=4517da72-c8f7-4cec-b2fc-fda9fe4354f9&pbi_source=linkShare",
     image: CustomerBehavior,
   },
-  {
-    company: "RareDx",
-    year: "2023",
-    title: "Rare Disease Diagnostic Tool",
-    category: "Hackathon",
-    results: [
-      { title: "Designed AI system to assist in rare disease diagnosis" },
-      { title: "Analyzed symptoms, history & lab reports for prediction" },
-      { title: "Aimed to support doctors with data-driven decisions" },
-    ],
-    link: "https://rxai.vercel.app/",
-    image: RareDx,
-  },
+  
   {
     company: "Gap0",
     year: "2026",
@@ -115,6 +104,19 @@ const portfolioProjects = [
     ],
     link: "https://gap0-z3sf.vercel.app/",
     image: Gap0,
+  },
+  {
+    company: "Suraksha",
+    year: "2026",
+    title: "Disaster Intelligence System",
+    category: "Hackathon",
+    results: [
+      { title: "Developed multi-source ingestion pipeline for Open-Meteo, USGS, GDACS, and news alerts" },
+      { title: "Engineered cross-source verification, temporal anomaly detection, and incident fusion" },
+      { title: "Created Leaflet GIS dashboard featuring priority incidents and event timelines" },
+    ],
+    link: "https://suraksha-mu.vercel.app/",
+    image: Suraksha,
   },
   {
     company: "HealthSpeak",
@@ -143,19 +145,6 @@ const portfolioProjects = [
     image: SupplyShield,
   },
   {
-    company: "Suraksha",
-    year: "2026",
-    title: "Disaster Intelligence System",
-    category: "Hackathon",
-    results: [
-      { title: "Developed multi-source ingestion pipeline for Open-Meteo, USGS, GDACS, and news alerts" },
-      { title: "Engineered cross-source verification, temporal anomaly detection, and incident fusion" },
-      { title: "Created Leaflet GIS dashboard featuring priority incidents and event timelines" },
-    ],
-    link: "https://suraksha-mu.vercel.app/",
-    image: Suraksha,
-  },
-  {
     company: "TruthLens",
     year: "2026",
     title: "AI Fact-Checking System",
@@ -167,6 +156,32 @@ const portfolioProjects = [
     ],
     link: "https://truthlens-frontend-beta.vercel.app/",
     image: TruthLens,
+  },
+  {
+    company: "RareDx",
+    year: "2023",
+    title: "Rare Disease Diagnostic Tool",
+    category: "Hackathon",
+    results: [
+      { title: "Designed AI system to assist in rare disease diagnosis" },
+      { title: "Analyzed symptoms, history & lab reports for prediction" },
+      { title: "Aimed to support doctors with data-driven decisions" },
+    ],
+    link: "https://rxai.vercel.app/",
+    image: RareDx,
+  },
+    {
+    company: "AIPhen",
+    year: "2025",
+    title: "GenAI-Based Financial Education Platform",
+    category: "Hackathon",
+    results: [
+      { title: "Built a privacy-first educational platform using Firebase Auth, Firestore, and Google IDX" },
+      { title: "Integrated Google Finance API to enable real-time investment product discovery" },
+      { title: "Achieved near-perfect performance benchmarks with a 99+ Lighthouse score" },
+    ],
+    link: "https://aiphen.atrv.tech/",
+    image: AIPhen,
   },
 ];
 
